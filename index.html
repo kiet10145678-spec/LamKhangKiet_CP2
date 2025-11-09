@@ -13,7 +13,69 @@
   </head>
 
   <body>
+ <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Trang Tin Tức</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="submit.html">Gửi Tin Tức</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    
+    <div class="container mt-4">
+        <h1 class="mb-4">Tin Tức Mới Nhất</h1>
+        <div class="row">
+            <!-- Tin tức 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://cdn.nhandan.vn/images/dd539d6c75c78bace97a9e1a7e89ea22bdd370e0453e12f0ddb190cf335f39b611e505ef808b3bba01abdaf46e3f2bd8/1.jpg" class="card-img-top" alt="Tin tức 1">
+                    <div class="card-body">
+                        <h5 class="card-title">12h cây xăng Thanh Hóa</h5>
+                        <p class="card-text">Vụ việc bạo lực học đường ở Thanh Hóa</p>
+                        <a href="detail.html?id=1" class="btn btn-primary">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tin tức 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://nld.mediacdn.vn/291774122806476800/2025/10/16/ca-1760593184375284225827-119-0-919-1280-crop-17605931917221763014948.jpeg" class="card-img-top" alt="Tin tức 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Lương Bàng Quang và sổ đỏ </h5>
+                        <p class="card-text">Ngân 98 bị bắt giữ......</p>
+                        <a href="detail.html?id=2" class="btn btn-primary">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tin tức 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://i.ytimg.com/vi/XqrRxgMbUK4/maxresdefault.jpg" class="card-img-top" alt="Tin tức 3">
+                    <div class="card-body">
+                        <h5 class="card-title">mèo bị xay</h5>
+                        <p class="card-text">Con mèo rớt vô máy xay</p>
+                        <a href="detail.html?id=3" class="btn btn-primary">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Bạn có thể thêm nhiều tin tức khác tương tự -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+ 
   </body>
 </html>

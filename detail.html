@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Tin Tức</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Trang Tin Tức</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="submit.html">Gửi Tin Tức</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4" id="news-title">Vụ việc Thanh Hóa</h1>
+        <img src="https://cdn.nhandan.vn/images/dd539d6c75c78bace97a9e1a7e89ea22bdd370e0453e12f0ddb190cf335f39b611e505ef808b3bba01abdaf46e3f2bd8/1.jpg" class="img-fluid rounded mb-4" alt="Hình ảnh minh họa" id="news-image">
+        <div id="news-content">
+            <p>Đây là nội dung đầy đủ của tin tức số 1. Nó sẽ bao gồm các đoạn văn chi tiết, có thể có thêm hình ảnh, video hoặc các yếu tố đa phương tiện khác.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Để xây dựng một trang web tin tức động, bạn sẽ cần sử dụng một ngôn ngữ lập trình backend (như Node.js, Python, PHP, Ruby) và một cơ sở dữ liệu để lưu trữ các bài viết. Khi đó, trang chi tiết tin tức có thể lấy dữ liệu từ cơ sở dữ liệu dựa trên ID tin tức được truyền qua URL.</p>
+            <p>Proin eget tortor risus. Praesent sapien massa, convallis a sagittis eu, feugiat a dui. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+        </div>
+        <a href="index.html" class="btn btn-secondary mt-4">Quay lại Trang Chủ</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Đây là ví dụ đơn giản để lấy ID từ URL và "giả lập" nội dung
+        // Trong một ứng dụng thực tế, bạn sẽ dùng JS để fetch data từ API
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const newsId = urlParams.get('id');
+
+            if (newsId === '1') {
+                document.getElementById('news-title').innerText = "Vụ việc Thanh Hóa";
+                document.getElementById('news-image').src = "https://via.placeholder.com/800x450/20c997/ffffff?text=Hinh+Minh+Hoa+1";
+                document.getElementById('news-content').innerHTML = `
+                    <p>Đây là nội dung đầy đủ của tin tức số 1. Nó sẽ bao gồm các đoạn văn chi tiết, có thể có thêm hình ảnh, video hoặc các yếu tố đa phương tiện khác.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                `;
+            } else if (newsId === '2') {
+                document.getElementById('news-title').innerText = "Lương Bàng Quang và sổ đỏ";
+                document.getElementById('news-image').src = "https://via.placeholder.com/800x450/0d6efd/ffffff?text=Hinh+Minh+Hoa+2";
+                document.getElementById('news-content').innerHTML = `
+                    <p>Nội dung chi tiết của tin tức số 2. Đây là nơi bạn trình bày toàn bộ thông tin mà bạn muốn truyền tải đến người đọc.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                `;
+            }
+             else if (newsId === '3') {
+                document.getElementById('news-title').innerText = "Mèo bị xay";
+                document.getElementById('news-image').src = "https://i.ytimg.com/vi/XqrRxgMbUK4/maxresdefault.jpg";
+                document.getElementById('news-content').innerHTML = `
+                    <p>Nội dung chi tiết của tin tức số 3.</p>
+                    <p>Proin eget tortor risus. Praesent sapien massa, convallis a sagittis eu, feugiat a dui. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+                `;
+            }
+            // Thêm các điều kiện else if cho các tin tức khác2
+        });
+    </script>
+</body>
+</html>
